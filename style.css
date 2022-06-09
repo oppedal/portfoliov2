@@ -39,15 +39,16 @@ li {
 }
 ul {
   display: flex;
+  margin: 0;
 }
-
+/* Homepage */
 #home {
   background-color: var(--dark);
 }
 #home nav {
   color: var(--orange);
 }
-#home nav li:hover {
+#home li:hover {
   color: var(--blue);
 }
 #home h1 {
@@ -58,4 +59,60 @@ ul {
 }
 #home h3 span {
   color: var(--blue);
+}
+/* About me */
+
+#about-me {
+  background-color: var(--dark);
+  display: grid;
+  grid-template-columns: 1fr 0.1fr;
+}
+.about-main {
+  grid-column: 1/2;
+  background-color: var(--blue);
+}
+#about-me h1 {
+  color: var(--pink);
+}
+#about-me h1 span {
+  color: var(--yellow);
+}
+#about-me li:hover {
+  color: var(--yellow);
+}
+
+/* Projects */
+
+#projects {
+  background-color: var(--blue);
+  display: grid;
+  grid-template-columns: 0.1fr 1fr;
+}
+#projects nav {
+  margin-right: 2rem;
+}
+#projects h1 {
+  color: var(--blue);
+  margin-left: 1.5rem;
+}
+
+.projects-main {
+  grid-column: 2/3;
+  background-color: var(--pink);
+}
+.projects-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Contact */
+#contact {
+  background-color: var(--pink);
+  display: grid;
+  grid-template-columns: 1fr 0.1fr;
+}
+
+.contact-main {
+  grid-column: 1/2;
+  background-color: var(--yellow);
 }
