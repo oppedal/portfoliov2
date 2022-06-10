@@ -16,6 +16,7 @@
 body {
   font-family: var(--mainFont);
   font-weight: var(--regular);
+  background-color: var(--dark);
 }
 
 section {
@@ -35,7 +36,10 @@ li {
   margin-top: 1.5rem;
 }
 .container {
+  margin-inline: auto;
+  max-width: 1400px;
   height: 100vh;
+  /* width: 100vw; */
 }
 ul {
   display: flex;
@@ -44,22 +48,67 @@ ul {
 /* Homepage */
 #home {
   background-color: var(--dark);
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+}
+
+.home-left {
+  grid-column: 1/2;
+}
+.home-right {
+  grid-column: 2/3;
+  display: grid;
+  grid-template-rows: 0.2fr 1fr;
+}
+.home-square {
+  background-color: var(--blue);
+  width: 600px;
+  height: 600px;
+  rotate: 45deg;
+  /* position: absolute; */
+  right: -5rem;
+  display: grid;
+  place-content: center;
+}
+.home-image {
+  rotate: -45deg;
+  scale: 90%;
+}
+.home-hero {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home-hero h3 {
+  margin-top: -1rem;
+  color: var(--pink);
+}
+.home-hero h3 span {
+  color: var(--blue);
+}
+.home-scroll {
+  color: var(--blue);
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--drawnFont);
 }
 #home nav {
   color: var(--orange);
+  display: grid;
+  place-content: left top;
+  margin-left: -4rem;
 }
 #home li:hover {
   color: var(--blue);
 }
 #home h1 {
   color: var(--yellow);
+  font-size: 3rem;
 }
-#home h3 {
-  color: var(--pink);
-}
-#home h3 span {
-  color: var(--blue);
-}
+
 /* About me */
 
 #about-me {
